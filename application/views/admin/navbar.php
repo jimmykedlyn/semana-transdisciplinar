@@ -28,6 +28,7 @@
 						<li><a href="http://semanatrans.esy.es" target="_blank"><i class="fa fa-briefcase fa-fw"></i>&nbsp;Escritorio Escola</a></li>
 					</ul>
 				</li>
+				<li><a href="<?php echo base_url('ajuda');?>" target="_blank">Ajuda&nbsp;<i class="fa fa-question"></i></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">              
 				<li><a href="<?php echo base_url('home/sair');?>">Sair&nbsp;<i class="fa fa-sign-out fa-fw fa-lg"></i></a></li>

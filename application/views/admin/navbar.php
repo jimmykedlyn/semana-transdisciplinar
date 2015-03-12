@@ -23,12 +23,12 @@
 					<ul class="dropdown-menu" role="menu">
 						<li <?php if($ativo == 5){echo 'class="active"';}?>><a href="<?php echo base_url('admin/alteracadastro');?>"><i class="fa fa-pencil-square-o fa-fw"></i>&nbsp;Alterar Cadastro</a></li>	
 						<li class="divider"></li>
-						<li class="dropdown-header">Ajuda&nbsp;<i class="fa fa-question"></i></li>
-						<li><a href="<?php echo base_url('ajuda');?>"><i class="fa fa-comment-o fa-fw"></i>&nbsp;Contate-nos</a></li>
+						<li class="dropdown-header">Desenvolvido por</i></li>
+						
 						<li><a href="http://semanatrans.esy.es" target="_blank"><i class="fa fa-briefcase fa-fw"></i>&nbsp;Escritorio Escola</a></li>
 					</ul>
 				</li>
-				<li><a href="<?php echo base_url('ajuda');?>" target="_blank">Ajuda&nbsp;<i class="fa fa-question"></i></a></li>
+				<li <?php if($ativo == 6){echo 'class="active"';}?>><a href="<?php echo base_url('admin/ajuda');?>">Ajuda&nbsp;<i class="fa fa-question"></i></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">              
 				<li><a href="<?php echo base_url('home/sair');?>">Sair&nbsp;<i class="fa fa-sign-out fa-fw fa-lg"></i></a></li>

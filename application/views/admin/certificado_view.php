@@ -12,10 +12,9 @@
   $dados['ativo'] = 4; $this->load->view('admin/navbar',$dados);?>
   <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12">
-      <h2>Certificados Aki</h2>     
-       <object class="pdf" data="<?php echo base_url('assets/cronograma.pdf');?>" type="application/pdf"> 
-        </object>
-      <a class="btn btn-warning btn-lg" href="<?php echo base_url('assets/cronograma.pdf');?>">Download Aqui!</a>   
+      <h2>Certificados</h2>     
+      <h4>Certificados de PHP  <a class="btn" href="<?php echo base_url('assets/certificado.pdf');?>" target="_blank"><i class="fa fa-print"></i></a>   </h4>
+      
   </div>
   </div>
 </div>

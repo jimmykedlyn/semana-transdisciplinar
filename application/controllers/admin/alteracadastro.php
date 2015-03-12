@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Alteracadastro extends CI_Controller {  /**
+class Alteracadastro extends CI_Controller {  
+    /**
      * Alteração de Cadastro - Area Administrativa
      *
      * @package     CodeIgniter

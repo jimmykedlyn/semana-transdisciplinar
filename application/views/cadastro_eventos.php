@@ -48,82 +48,115 @@
   <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12">
     <h2>Cadastro de Eventos</h2>
-    <?php     
-    echo form_open('cadastro/receber','class="form-horizontal"'); 
+    <?php 
+    echo form_open('cadastroevento/receber','class="form-horizontal"'); 
     echo form_fieldset('Efetuar Cadastro');
-
     echo '<div id="data">';
     echo form_label('DATA', 'data');
+    foreach($dia as $dia) {
     $atributos6 = array(              
         "name" => "data",
         "id" => "data1",
-        "value" => "1",
+        "value" => $dia['id'],
         "class" => "form-control radioee",
         "checked" => TRUE              
       );                 
     echo form_radio($atributos6);
-    echo '<div>Dia 1</div>';
-    $atributos7 = array(              
-        "name" => "data",
-        "id" => "data2",
-        "value" => "2",
-        "class" => "form-control radioee"              
-      );         
-    echo form_radio($atributos7);
-    echo '<div>Dia 2</div>';
-
-     $atributos7 = array(              
-        "name" => "data",
-        "id" => "data3",
-        "value" => "3",
-        "class" => "form-control radioee"              
-      );         
-    echo form_radio($atributos7);
-    echo '<div>Dia 3</div>';
+    echo '<div>'.$dia['descricao'].'</div>';
+    }
     echo '</div>';
+
+    echo form_label('ÁREA', 'area');
+    $options = array(
+                  ''  => '',
+                  '1' => 'EXATAS',
+                  '2' => 'SAÚDE',
+                  '3' => 'HUMANAS',
+                  '4' => 'SOCIAIS',                               
+                );
+    $shirts_on_sale = array('1', '4');
+    echo form_dropdown('area', $options);
+
+    echo form_label('CURSO', 'curso');
+    $options = array(
+                  ''  => '',
+                  '1'  => 'CIÊNCIA DA COMPUTAÇÃO',
+                  '2'    => 'ENFERMAGEM',                               
+                );
+    $shirts_on_sale = array('1', '4');
+    echo form_dropdown('curso', $options);
 
     echo form_label('TURNO', 'turno');
     $options = array(
-                  'turno1'  => '',
-                  'turno2'  => 'Matutino',
-                  'turno3'    => 'Vespertino',
-                  'turno4'   => 'Noturno',                  
+                  ''  => '',
+                  '1'  => 'Matutino',
+                  '2'    => 'Vespertino',
+                  '3'   => 'Noturno',                  
                 );
-    $shirts_on_sale = array('turno1', 'turno4');
-    echo form_dropdown('turno', $options, 'turno1');
+    $shirts_on_sale = array('1', '4');
+    echo form_dropdown('turno', $options);
 
     echo form_label('HORARIO', 'horario');
     $options = array(
-                  'horario1'  => '',
-                  'horario2'  => '9H - 10H',
-                  'horario3'    => '10H - 11H',
-                  'horario4'   => '11H - 12H',                  
-                );
-    $shirts_on_sale = array('horario1', 'horario4');
-    echo form_dropdown('horario', $options, 'horario1');
+                  ''  => '',
+                  '1'  => '9H - 10H',
+                  '2'    => '18H - 19H',
+                 );
+    echo form_dropdown('horario', $options);
 
-     echo form_label('SALA', 'sala');
+    echo form_label('SALA', 'sala');
     $options = array(
-                  'sala1'  => '',
-                  'sala2'  => 'SALA 203',
-                  'sala3'    => 'SALA 404',
-                  'sala4'   => 'AUDITÓRIO',                  
+                  ''  => '',
+                  '1'  => 'SALA 203',
+                  '2'   => 'AUDITÓRIO',                  
                 );
     $shirts_on_sale = array('sala1', 'sala4');
     echo form_dropdown('sala', $options, 'sala1');
 
     echo form_label('TIPO', 'tipo');
     $options = array(
-                  'tipo1'  => '',
-                  'tipo2'  => 'PALESTRA',
-                  'tipo3'    => 'MINI-CURSO',
-                  'tipo4'   => 'WORKSHOP',                  
+                  ''  => '',                  
+                  '1'    => 'MINI-CURSO',
+                  '2'  => 'PALESTRA',                                    
                 );
     $shirts_on_sale = array('tipo1', 'tipo4');
     echo form_dropdown('tipo', $options, 'tipo1');
 
+    echo form_label('TEMA DO CURSO', 'tema');
+    $atr_text = array(              
+        "name" => "tema",
+        "id" => "tema",
+        "value" => set_value('tema'),
+        "class" => "form-control ee",                  
+      );                 
+    echo form_input($atr_text);
+
+    echo form_label('PALESTRANTE', 'palestrante');
+    $atr_text = array(              
+        "name" => "palestrante",
+        "id" => "palestrante",
+        "value" => set_value('palestrante'),
+        "class" => "form-control ee",                  
+      );                 
+    echo form_input($atr_text);
+
+    echo form_label('VAGAS', 'vagas');
+    $atr_text = array(              
+        "name" => "vagas",
+        "id" => "vagas",
+        "value" => set_value('vagas'),
+        "class" => "form-control ee",                  
+      );                 
+    echo form_input($atr_text);
+
     echo form_label('DESCRIÇÃO', 'descricao');
-    echo form_textarea();
+    $atr_text = array(              
+        "name" => "descricao",
+        "id" => "descricao",
+        "value" => set_value('descricao'),
+        "class" => "form-control",                  
+      );                 
+    echo form_textarea($atr_text);
 
     echo validation_errors();
 
@@ -137,7 +170,7 @@
 
     echo form_fieldset_close();
     echo form_close();
-    ?>    
+   ?>    
   </div>
   </div>
 </div>

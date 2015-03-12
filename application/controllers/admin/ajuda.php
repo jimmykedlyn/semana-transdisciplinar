@@ -1,8 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Eventos extends CI_Controller {  
+class Ajuda extends CI_Controller {  
     /**
-     * Eventos - Area Administrativa
+     * Ajuda - Area Administrativa
      *
      * @package     CodeIgniter
      * @subpackage  Controllers
@@ -12,7 +12,6 @@ class Eventos extends CI_Controller {
      * 
      * Este Controller foi projetado para exibir os eventos!
      */
-    
     public function __construct(){
         parent::__construct();
         /* Esta condição verifica se algum
@@ -23,9 +22,8 @@ class Eventos extends CI_Controller {
             redirect(base_url());            
         }        
     }
+
     public function index(){
-        $this->load->model('eventosmodel');
-        $dados['eventos'] = $this->eventosmodel->get_eventosturno();
-        $this->load->view('admin/eventos_semana',$dados);
+        $this->load->view('admin/ajuda');
     }
 }

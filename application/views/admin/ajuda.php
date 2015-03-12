@@ -7,36 +7,30 @@
   .panel-warning>.panel-heading{
     background-image: linear-gradient(to bottom,#EFA843 0,#faf2cc 100%);
   }
- /* .aviao{
+  .aviao{
     width: 40%; 
     float: right;    
-  }*/
+  }
   .contate{    
     
   }
- /* @media (max-width: 768px) {
+  @media (max-width: 768px) {
     .aviao{
       width: 50%;
       float: left;
       margin: auto 25%;
-    }*/
+    }
     .contate{
       text-align: center;
-
-  }
-
-  .contate_email{
-    padding: 42%;
-
-  }
-
-
+    }
   }
 
   </style>
 </head>
 <body>
   <div class="container main">
+  <?php /* Chama a View da Barra de navegação*/
+  $dados['ativo'] = 6; $this->load->view('admin/navbar',$dados);?>
   <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12">
       <h2>Ajuda</h2>
@@ -104,12 +98,12 @@
 </div>          
   </div>
   </div>
-  <!--<div class="col-xs-12 col-sm-6 col-md-6">
+  <div class="col-xs-12 col-sm-6 col-md-6">
     <img class="aviao" src="<?php echo base_url('assets/img/aviao.png') ?>" alt="Aviao">
-  </div>-->
- <!-- <div class="col-xs-12 col-sm-6 col-md-6">-->
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-6">
   <h3 class="contate">Contate-nos:</h3>
-  <a class="contate_email"  href="mailto:semanatrans@gmail.com">semanatrans@gmail.com</a>    <br>
+  <a href="mailto:semanatrans@gmail.com">semanatrans@gmail.com</a>    
      
    </div>
 </div>  	

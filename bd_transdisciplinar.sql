@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10/03/2015 às 15:39
+-- Tempo de geração: 13/03/2015 às 17:10
 -- Versão do servidor: 5.6.21
 -- Versão do PHP: 5.6.3
 
@@ -60,8 +60,8 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('1a1a5e105506d49d06cdf28dfd41581e', '::1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36', 1425997765, 'a:3:{s:2:"id";s:1:"8";s:4:"nome";s:16:"ANDERSON BEZERRA";s:6:"logado";b:1;}'),
-('9c7de814bcc4e90a63ad9fb98c36640f', '::1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36', 1425918778, '');
+('2b421c0dc476351d9a2e92d914a25f92', '::1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36', 1426253485, ''),
+('98a2357e04a25572f041d27cbaf44d2f', '::1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36', 1426257608, 'a:4:{s:9:"user_data";s:0:"";s:2:"id";s:1:"8";s:4:"nome";s:16:"ANDERSON BEZERRA";s:6:"logado";b:1;}');
 
 -- --------------------------------------------------------
 
@@ -144,28 +144,28 @@ CREATE TABLE IF NOT EXISTS `eventos_cadastrados` (
   `id_curso` int(11) NOT NULL,
   `ID_EVENTO` int(11) NOT NULL,
   `ID_SALA` int(11) NOT NULL,
-  `DESCRICAO` varchar(100) NOT NULL,
+  `DESCRICAO` text NOT NULL,
   `VAGAS` int(3) NOT NULL,
   `id_area` int(11) NOT NULL,
-  `id_horario` int(11) NOT NULL,
   `id_turno` int(11) NOT NULL,
   `id_dia` int(11) NOT NULL,
   `nome` varchar(200) NOT NULL,
-  `PALESTRANTE` varchar(200) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+  `PALESTRANTE` varchar(200) NOT NULL,
+  `HORARIO` varchar(10) NOT NULL,
+  `id_horario` int(10) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Fazendo dump de dados para tabela `eventos_cadastrados`
 --
 
-INSERT INTO `eventos_cadastrados` (`ID`, `id_curso`, `ID_EVENTO`, `ID_SALA`, `DESCRICAO`, `VAGAS`, `id_area`, `id_horario`, `id_turno`, `id_dia`, `nome`, `PALESTRANTE`) VALUES
-(1, 1, 1, 1, 'Esse curso é Php para iniantes voltado para desenvolvimento web.', 60, 1, 1, 1, 1, 'Php', 'Dr. Anderson'),
-(6, 2, 1, 2, 'PARA INICIANTES', 60, 3, 2, 1, 1, 'HTML5 E CSS3', 'RODRIGO ALVES'),
-(7, 2, 2, 2, 'Fatos para a Saúde da mulher', 50, 2, 2, 3, 1, 'Saude da Mulher', 'Enfermeiro Rodrigo'),
-(8, 2, 2, 2, 'fwefewkfkfwe', 55, 2, 1, 2, 1, 'asasff', 'ffetw'),
-(9, 2, 2, 2, 'fwefewkfkfwe', 55, 2, 1, 2, 1, 'asasff', 'ffetw'),
-(10, 2, 2, 2, 'fwefewkfkfwe', 55, 2, 1, 2, 1, 'asasff', 'ffetw'),
-(11, 1, 1, 1, 'wçfejwekjkwe', 60, 3, 1, 2, 3, 'ututggt', 'ljojj');
+INSERT INTO `eventos_cadastrados` (`ID`, `id_curso`, `ID_EVENTO`, `ID_SALA`, `DESCRICAO`, `VAGAS`, `id_area`, `id_turno`, `id_dia`, `nome`, `PALESTRANTE`, `HORARIO`, `id_horario`) VALUES
+(10, 1, 1, 1, 'Cuso voltado para iniciante', 22, 1, 1, 1, 'PHP', 'ALISSON', '15H - 16H', 5),
+(11, 1, 1, 2, 'Cuso voltado para iniciante', 55, 2, 1, 2, 'C++', 'ANDERSON', '15H - 16H', 5),
+(12, 1, 2, 1, 'Cuso voltado para iniciante', 88, 2, 1, 3, 'JAVA', 'ANDERSON', '11H - 12H', 3),
+(13, 1, 1, 1, 'Cuso voltado para iniciante', 11, 2, 1, 1, 'HTML', 'RODRIGO', '9H - 10H', 1),
+(14, 1, 2, 2, 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wo', 50, 3, 2, 2, 'Robotica', 'Alisson', '11H - 12H', 3),
+(15, 1, 1, 1, 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven''t heard of them accusamus labore sustainable VHS.', 50, 1, 1, 2, 'HTML5 E CSS3', 'Alisson', '10H - 11H', 2);
 
 -- --------------------------------------------------------
 
@@ -185,17 +185,23 @@ CREATE TABLE IF NOT EXISTS `eventos_usuario` (
 --
 
 CREATE TABLE IF NOT EXISTS `horario` (
-`ID` int(11) NOT NULL,
-  `DESCRICAO` varchar(200) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `DESCRICAO` varchar(10) NOT NULL,
+  `ID` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Fazendo dump de dados para tabela `horario`
 --
 
-INSERT INTO `horario` (`ID`, `DESCRICAO`) VALUES
-(1, '9H-10H'),
-(2, '18H - 19H');
+INSERT INTO `horario` (`DESCRICAO`, `ID`) VALUES
+('10H - 11H', 2),
+('11H - 12H', 3),
+('14H - 15H', 4),
+('15H - 16H', 5),
+('16H - 17H', 6),
+('19H - 20H', 7),
+('20H - 21H', 8),
+('9H - 10H', 1);
 
 -- --------------------------------------------------------
 
@@ -283,9 +289,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `id_tipo`, `nome`, `cpf`, `nascimento`, `email`, `sexo`, `telefone`, `celular`, `monitor`, `senha`, `data_cadastro`, `hora_cadastro`) VALUES
-(7, 2, 'RODRIGO ALVES', '05065871345', '1993-12-13', 'rodrigo@rodrigo.com', 'M', '9999999', '99999999', 'N', '12345678', '0000-00-00', '0000-00-00 00:00:00'),
 (8, 2, 'ANDERSON BEZERRA', '05032429341', '1994-08-16', 'andersonbs.profile@gmail.com', 'M', '9832335005', '98988225864', 'N', '12345678', '0000-00-00', '0000-00-00 00:00:00'),
-(9, 2, 'IVAN CABRAL BARRETO FILHO', '05145832311', '2015-03-18', 'ivan@gmail.com', 'M', '9832336060', '98988225864', 'N', '12345679', '0000-00-00', '2015-03-09 13:00:23'),
 (10, 1, 'RDG', '82508555401', '2014-12-11', 'rdg@gmail.com', 'M', '443642674', '56868686866', 'N', '123', '0000-00-00', '0000-00-00 00:00:00'),
 (12, 1, 'BENTIVI VIVI', '03168438308', '2015-03-18', 'bentivitivi@gmai.com', 'F', '98989898', '9888225864', 'N', '12345678', '0000-00-00', '2015-03-09 16:31:40');
 
@@ -333,7 +337,7 @@ ALTER TABLE `eventos`
 -- Índices de tabela `eventos_cadastrados`
 --
 ALTER TABLE `eventos_cadastrados`
- ADD PRIMARY KEY (`ID`), ADD KEY `ID_EVENTO` (`ID_EVENTO`), ADD KEY `ID_SALA` (`ID_SALA`), ADD KEY `id_curso` (`id_curso`), ADD KEY `id_area` (`id_area`,`id_horario`,`id_turno`,`id_dia`), ADD KEY `id_dia` (`id_dia`), ADD KEY `id_turno` (`id_turno`), ADD KEY `id_horario` (`id_horario`), ADD KEY `PALESTRANTE` (`PALESTRANTE`);
+ ADD PRIMARY KEY (`ID`), ADD KEY `ID_EVENTO` (`ID_EVENTO`), ADD KEY `ID_SALA` (`ID_SALA`), ADD KEY `id_curso` (`id_curso`), ADD KEY `id_area` (`id_area`,`id_turno`,`id_dia`), ADD KEY `id_dia` (`id_dia`), ADD KEY `id_turno` (`id_turno`), ADD KEY `PALESTRANTE` (`PALESTRANTE`), ADD KEY `HORARIO` (`HORARIO`), ADD KEY `id_horario` (`id_horario`);
 
 --
 -- Índices de tabela `eventos_usuario`
@@ -345,7 +349,7 @@ ALTER TABLE `eventos_usuario`
 -- Índices de tabela `horario`
 --
 ALTER TABLE `horario`
- ADD PRIMARY KEY (`ID`);
+ ADD PRIMARY KEY (`ID`), ADD UNIQUE KEY `DESCRICAO` (`DESCRICAO`), ADD KEY `ID` (`ID`);
 
 --
 -- Índices de tabela `sala`
@@ -404,12 +408,7 @@ MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- AUTO_INCREMENT de tabela `eventos_cadastrados`
 --
 ALTER TABLE `eventos_cadastrados`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
---
--- AUTO_INCREMENT de tabela `horario`
---
-ALTER TABLE `horario`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT de tabela `sala`
 --
@@ -440,11 +439,12 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 ALTER TABLE `eventos_cadastrados`
 ADD CONSTRAINT `eventos_cadastrados_ibfk_1` FOREIGN KEY (`id_dia`) REFERENCES `dia` (`id`) ON UPDATE CASCADE,
 ADD CONSTRAINT `eventos_cadastrados_ibfk_2` FOREIGN KEY (`id_turno`) REFERENCES `turno` (`ID`) ON UPDATE CASCADE,
-ADD CONSTRAINT `eventos_cadastrados_ibfk_3` FOREIGN KEY (`id_horario`) REFERENCES `horario` (`ID`) ON UPDATE CASCADE,
 ADD CONSTRAINT `eventos_cadastrados_ibfk_4` FOREIGN KEY (`ID_SALA`) REFERENCES `sala` (`ID`) ON UPDATE CASCADE,
 ADD CONSTRAINT `eventos_cadastrados_ibfk_5` FOREIGN KEY (`id_curso`) REFERENCES `curso` (`ID`) ON UPDATE CASCADE,
 ADD CONSTRAINT `eventos_cadastrados_ibfk_6` FOREIGN KEY (`id_area`) REFERENCES `area` (`ID`) ON UPDATE CASCADE,
-ADD CONSTRAINT `eventos_cadastrados_ibfk_7` FOREIGN KEY (`ID_EVENTO`) REFERENCES `eventos` (`ID`) ON UPDATE CASCADE;
+ADD CONSTRAINT `eventos_cadastrados_ibfk_7` FOREIGN KEY (`ID_EVENTO`) REFERENCES `eventos` (`ID`) ON UPDATE CASCADE,
+ADD CONSTRAINT `eventos_cadastrados_ibfk_8` FOREIGN KEY (`HORARIO`) REFERENCES `horario` (`DESCRICAO`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `eventos_cadastrados_ibfk_9` FOREIGN KEY (`id_horario`) REFERENCES `horario` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Restrições para tabelas `eventos_usuario`

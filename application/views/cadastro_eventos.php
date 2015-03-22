@@ -99,8 +99,14 @@
     echo form_label('HORARIO', 'horario');
     $options = array(
                   ''  => '',
-                  '1'  => '9H - 10H',
-                  '2'    => '18H - 19H',
+                  '1' => '9H - 10H',
+                  '2' => '10H - 11H',
+                  '3' => '11H - 12H',
+                  '4' => '14H - 15H',
+                  '5' => '15H - 16H',
+                  '6' => '16H - 17H',
+                  '7' => '19H - 20H',
+                  '8' => '20H - 21H',
                  );
     echo form_dropdown('horario', $options);
 

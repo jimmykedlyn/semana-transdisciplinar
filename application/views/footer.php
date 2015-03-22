@@ -1,8 +1,11 @@
 <footer>
-	<div class="container">
-	  <p>Desenvolvido pelo <a href="http://www.semanatrans.esy.es" target="_blank">Escritório Escola 	</a></p>
-	  <p style="font-size:14px;">Copyright 2015</p>
-	</div>
+<div class="center-block"
+<div class="col-xs-12 col-sm-7 col-md-12">
+<a href="<?php echo base_url() ?>">
+        <img class="footer" src="<?php echo base_url('assets/img/footer.svg') ?>" alt="14 semana transdisciplinar Pitágoras - FAMA">
+        </a>
+
+     </div>
 </footer>
 </body>
-</html>
+</html> 

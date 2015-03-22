@@ -21,12 +21,10 @@
 		<div class="col-xs-12 col-sm-7 col-md-6">
 			<div class="panel panel-warning">
 			<div class="panel-heading">
-				<?php echo "<h2> Bem Vindo ";					
-                   echo strtolower($this->session->userdata('nome'));
-                   echo "!! </h2>";?>			
+				<?php echo "<h2> Bem Vindo!</h2>";?>
 			</div>
 			<div class="panel-body">
-				<p>Seja Bem Vindo a Semana Transdisciplinar, veja o cronograma aqui!</p>
+				<p>Veja o seu cronograma aqui!</p>
 				<a class="btn btn-warning btn-lg" href="<?php echo base_url('admin/cronograma');?>" role="button">Cronograma</a>
 			</div>
 			</div>
@@ -36,12 +34,21 @@
 			<div class="panel panel-default">
 			<div class="panel-heading"><h2>Eventos</h2></div>
 			<div class="panel-body">
-				<p>Acesse aqui todos os eventos referentes a Semana Transdisciplinar e escolha o seu!!!</p>
+				<p>Acesse aqui os nossos eventos:</p>
 				<a class="btn btn-warning btn-lg" href="<?php echo base_url('admin/eventos');?>" role="button">Participar</a>
 			</div>
 			</div>
 		</div>
 		
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<div class="panel panel-info">
+			<div class="panel-heading"><h2>Meus Eventos</h2></div>
+			<div class="panel-body">
+				<p>Confira seus eventos aqui!</p>
+				
+			</div>
+			</div>
+		</div>
 	</div>
 </div>
 <?= $this->load->view('footer');//Chama a view footer?>

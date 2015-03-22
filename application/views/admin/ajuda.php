@@ -11,8 +11,8 @@
     width: 40%; 
     float: right;    
   }
-  .contate{    
-    
+  h2{    
+    text-align: left;
   }
   @media (max-width: 768px) {
     .aviao{
@@ -33,7 +33,7 @@
   $dados['ativo'] = 6; $this->load->view('admin/navbar',$dados);?>
   <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12">
-      <h2>Ajuda</h2>
+      <h2>Ajuda&nbsp;<i class="fa fa-question-circle fa-fw fa-lg"></i></h2>
       <h3 style="text-align:center">Perguntas Frequentes:</h3>
 
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">

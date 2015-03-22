@@ -9,6 +9,9 @@
     margin-right: 15px;
     margin-left: 5px;
   }
+  h2{
+    text-align: left;
+  }
   </style>
 </head>
 <body>
@@ -17,10 +20,10 @@
   $dados['ativo'] = 5; $this->load->view('admin/navbar',$dados);?>
   <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12">
-      <h2>Alteração de Cadastro</h2>
+      <h2>Cadastro&nbsp;<i class="fa fa-pencil-square fa-fw fa-lg"></i></h2>
         <?php foreach($usuario as $user) {
         echo form_open('admin/alteracadastro/altera','class="form-horizontal"'); 
-        echo form_fieldset('Alterar Cadastro');
+        echo form_fieldset('Alterar');
 
         #INPUT DO TIPO
         echo '<div id="tipo">';
@@ -268,7 +271,7 @@
         $atributosbtn = array(
             "type" => "submit",
             "name" => "btnSubmit",
-            "value" => "Alterar Cadastro",
+            "value" => "Concluir",
             "class" => "btn btn-warning btnlogin"
           );
         echo form_input($atributosbtn);

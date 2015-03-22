@@ -11,11 +11,11 @@
   
 </head>
 <body>
-  <div class="container main">
+  <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-7 col-md-6">
         <a href="<?php echo base_url() ?>">
-        <img class="logo" src="<?php echo base_url('assets/img/logo-trans.jpg') ?>" alt="14 semana transdisciplinar Pitágoras - FAMA">
+        <img class="logo" src="<?php echo base_url('assets/img/logo-trans.svg') ?>" alt="14 semana transdisciplinar Pitágoras - FAMA">
         </a>
       </div>
 
@@ -67,7 +67,7 @@
           <h4><i class="fa fa-hand-o-right fa-lg pull-left"></i>Informações importantes!</h4>
           <p>Para se inscrever nos eventos é necessário inicialmente cadastrar-se no sistema! Ainda não está cadastrado?</p>
           <a href="<?php echo base_url('cadastro');?>">Cadastre-se Aqui! </a> <br>       
-          <a href="#">Esqueceu sua senha?</a> <br>
+          <a href="<?php echo base_url('recuperarsenha?recuperar=sim');?>">Esqueceu sua senha?</a> <br>
           <a href="<?php echo base_url('ajuda');?>">Ajuda&nbsp;<i class="fa fa-question fa-lg"></i></a>
         </div>
       </div>
